@@ -1,5 +1,6 @@
 <div class="container">
   <h1>New Game</h1>
+  <p>Current Score : <%= @current_score %></p>
   <div class="d-flex">
     <% @letters.each do |letter| %>
       <div class="btn btn-primary btn-lg m-2"><%= letter %></div>
@@ -13,4 +14,7 @@
     <input type="text" name="input">
     <button type="submit">Play</button>
   </form>
+  <%= link_to "reset" do %>
+    <button class="btn btn-warning">Reset Score</button>
+  <% end %>
 </div>

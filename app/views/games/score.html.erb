@@ -1,3 +1,9 @@
 <h1>Results</h1>
+<p>Current Score : <%= @current_score %></p>
 <p><%= @result.html_safe %></p>
-<%= link_to "Play again", "new" %>
+<%= link_to "new" do %>
+  <button class="btn btn-success">Play Again</button>
+<% end %>
+<%= link_to "reset" do %>
+  <button class="btn btn-warning">Reset Score</button>
+<% end %>
